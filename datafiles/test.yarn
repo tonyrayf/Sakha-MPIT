@@ -1,51 +1,62 @@
 #__PrivCrochet_version:1
 __PrivCrochet_colorID: 2
-__PrivCrochet_position: 541,282
+__PrivCrochet_position: 540,281
 __PrivCrochet_tags: 
 title: Start
 ---
 <<bg("hallway")>>
 
+<<curr_chara("test1")>>
+
 Молодчик: Привет!
-Другой Чувак: Йо! Куда идёшь?
--> Кабинет
-    Чувак: Пошли вместе!
-    <<jump Cab>>
--> Зал
-    Чувак: А мне надо в кабинет.
-    <<jump Zal>>
--> Улица
-    Чувак: Аа. Ну пока!
-    Молодчик: Давай, пока.
-    <<jump Outside>>
+Антимолодчик: Йо! Куда идёшь?
+-> Наш кабинет
+    Антимолодчик: Пошли вместе!
+    <<jump Classroom>>
+-> Музыкальная
+    Антимолодчик: Оо снова на занятия да?
+    Молодчик: Угадал.
+    Антимолодчик: Ну, тогда удачи!
+    Молодчик: Давай, удачи!
+    <<jump Musicroom>>
+-> Уборная
+    Антимолодчик: А мне надо в кабинет.
+    Молодчик: Будь!
+    Антимолодчик: Пока!
+    <<jump Bathroom>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 913,54
+__PrivCrochet_position: 916,53
 __PrivCrochet_tags: 
-title: Cab
+title: Classroom
 ---
 <<bg("classroom")>>
 
-Чувак: Ну ок брат
+<<curr_chara("test1")>>
+
+Антимолодчик: Ну всё, будем учиться!
+Молодчик: Это да.
 <<jump Start>>
 ===
 __PrivCrochet_colorID: 0
 __PrivCrochet_position: 1032,296
 __PrivCrochet_tags: 
-title: Zal
+title: Musicroom
 ---
 <<bg("musicroom")>>
+<<is_mono()>>
 
-Чувак: Ну ок брат
+Молодчик: Начинаю занятие!
 <<jump Start>>
 ===
 __PrivCrochet_colorID: 0
 __PrivCrochet_position: 877,650
 __PrivCrochet_tags: 
-title: Outside
+title: Bathroom
 ---
 <<bg("bathroom")>>
+<<is_mono()>>
 
-Чувак: Ну ок брат
+Молодчик: фдхывд
 <<jump Start>>
 ===

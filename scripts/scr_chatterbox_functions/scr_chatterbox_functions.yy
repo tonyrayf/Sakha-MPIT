@@ -1,9 +1,9 @@
 {
   "$GMScript":"v1",
-  "%Name":"scr_helper_functions",
+  "%Name":"scr_chatterbox_functions",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"scr_helper_functions",
+  "name":"scr_chatterbox_functions",
   "parent":{
     "name":"Functions",
     "path":"folders/Scripts/Functions.yy",
