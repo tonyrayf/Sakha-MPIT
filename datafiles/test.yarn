@@ -1,0 +1,51 @@
+#__PrivCrochet_version:1
+__PrivCrochet_colorID: 2
+__PrivCrochet_position: 541,282
+__PrivCrochet_tags: 
+title: Start
+---
+<<bg("hallway")>>
+
+Молодчик: Привет!
+Другой Чувак: Йо! Куда идёшь?
+-> Кабинет
+    Чувак: Пошли вместе!
+    <<jump Cab>>
+-> Зал
+    Чувак: А мне надо в кабинет.
+    <<jump Zal>>
+-> Улица
+    Чувак: Аа. Ну пока!
+    Молодчик: Давай, пока.
+    <<jump Outside>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 913,54
+__PrivCrochet_tags: 
+title: Cab
+---
+<<bg("classroom")>>
+
+Чувак: Ну ок брат
+<<jump Start>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 1032,296
+__PrivCrochet_tags: 
+title: Zal
+---
+<<bg("musicroom")>>
+
+Чувак: Ну ок брат
+<<jump Start>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 877,650
+__PrivCrochet_tags: 
+title: Outside
+---
+<<bg("bathroom")>>
+
+Чувак: Ну ок брат
+<<jump Start>>
+===
