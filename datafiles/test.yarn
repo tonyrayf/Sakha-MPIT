@@ -1,18 +1,16 @@
 #__PrivCrochet_version:1
 __PrivCrochet_colorID: 2
-__PrivCrochet_position: 540,281
+__PrivCrochet_position: 723,276
 __PrivCrochet_tags: 
 title: Start
 ---
-<<bg("hallway")>>
-
-<<curr_chara("test1")>>
-
+<<main_chara_index(3)>>
 Молодчик: Привет!
+
+<<main_chara_index(0)>>
 Антимолодчик: Йо! Куда идёшь?
 -> Наш кабинет
-    Антимолодчик: Пошли вместе!
-    <<jump Classroom>>
+    <<jump CabDialogue>>
 -> Музыкальная
     Антимолодчик: Оо снова на занятия да?
     Молодчик: Угадал.
@@ -26,20 +24,18 @@ title: Start
     <<jump Bathroom>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 916,53
+__PrivCrochet_position: 1255,-187
 __PrivCrochet_tags: 
 title: Classroom
 ---
 <<bg("classroom")>>
-
-<<curr_chara("test1")>>
 
 Антимолодчик: Ну всё, будем учиться!
 Молодчик: Это да.
 <<jump Start>>
 ===
 __PrivCrochet_colorID: 0
-__PrivCrochet_position: 1032,296
+__PrivCrochet_position: 1082,439
 __PrivCrochet_tags: 
 title: Musicroom
 ---
@@ -59,4 +55,13 @@ title: Bathroom
 
 Молодчик: фдхывд
 <<jump Start>>
+===
+__PrivCrochet_colorID: 0
+__PrivCrochet_position: 1253,150
+__PrivCrochet_tags: 
+title: CabDialogue
+---
+""
+
+<<jump Classroom>>
 ===

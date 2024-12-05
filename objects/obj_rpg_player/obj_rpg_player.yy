@@ -30,7 +30,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"spr_characters",
+    "path":"sprites/spr_characters/spr_characters.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }

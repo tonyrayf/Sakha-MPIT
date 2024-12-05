@@ -1,6 +1,6 @@
 /// @param {real}	val	 Значение для wrap'а
-/// @param {real}  _max  Максимальное значение
-/// @param {real}  _min  Минимальное значение
+/// @param {real}  _min  Максимальное значение
+/// @param {real}  _max  Минимальное значение
 /// @description		 Делает ограничение как clamp, но при превышении или наоборот начинает заново как диск кодового замка	  
 
 function wrap(val, _min, _max)
