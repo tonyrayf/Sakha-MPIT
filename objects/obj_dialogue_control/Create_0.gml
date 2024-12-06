@@ -10,7 +10,7 @@ ChatterboxAddFunction("curr_chara_index",	get_curr_character_index);
 
 ChatterboxAddFunction("text_scale", function(scale) { obj_dialogue_control.text_scale = scale[0]; });
 
-ChatterboxAddFunction("hide_charas", f)
+ChatterboxAddFunction("hide_charas", function(hide) { obj_dialogue_control.hide_charas = hide[0]; })
 
 ChatterboxAddFunction("is_mono", function() { obj_dialogue_control.is_mono = true; });
 
@@ -42,5 +42,7 @@ option_index = 0;
 size = [0.96, 1];
 color = [c_ltgray, c_white];
 
+
+hide_charas = false;
 
 image_alpha = 0;

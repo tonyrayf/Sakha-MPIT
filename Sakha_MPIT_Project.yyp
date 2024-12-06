@@ -47,6 +47,7 @@
     {"$GMFolder":"","%Name":"Timelines","folderPath":"folders/Timelines.yy","name":"Timelines","resourceType":"GMFolder","resourceVersion":"2.0",},
   ],
   "IncludedFiles":[
+    {"$GMIncludedFile":"","%Name":"backstory.yarn","CopyToMask":-1,"filePath":"datafiles","name":"backstory.yarn","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
     {"$GMIncludedFile":"","%Name":"chatterbox_license.txt","CopyToMask":-1,"filePath":"datafiles","name":"chatterbox_license.txt","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
     {"$GMIncludedFile":"","%Name":"scene1.yarn","CopyToMask":-1,"filePath":"datafiles","name":"scene1.yarn","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
     {"$GMIncludedFile":"","%Name":"test.yarn","CopyToMask":-1,"filePath":"datafiles","name":"test.yarn","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
@@ -217,10 +218,10 @@
     {"roomId":{"name":"rm_init","path":"rooms/rm_init/rm_init.yy",},},
     {"roomId":{"name":"rm_menu","path":"rooms/rm_menu/rm_menu.yy",},},
     {"roomId":{"name":"rm_scene1","path":"rooms/rm_scene1/rm_scene1.yy",},},
+    {"roomId":{"name":"rm_backstory","path":"rooms/rm_backstory/rm_backstory.yy",},},
     {"roomId":{"name":"rm_dialogue_room","path":"rooms/rm_dialogue_room/rm_dialogue_room.yy",},},
     {"roomId":{"name":"rm_rpg_room","path":"rooms/rm_rpg_room/rm_rpg_room.yy",},},
     {"roomId":{"name":"rm_platformer_test","path":"rooms/rm_platformer_test/rm_platformer_test.yy",},},
-    {"roomId":{"name":"rm_backstory","path":"rooms/rm_backstory/rm_backstory.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[
