@@ -41,5 +41,7 @@ if (image_alpha < 1) image_alpha += fade_spd;
 
 if (ChatterboxIsStopped(chatterbox))
 {
+	ChatterboxUnload(yarn_file);
+	
 	instance_destroy();
 }

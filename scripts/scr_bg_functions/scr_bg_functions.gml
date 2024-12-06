@@ -5,19 +5,24 @@ function smooth_bg_change(new_bg, ind = 0, time = 0.5)
 		backgrounds[? "classroom"	] = spr_classroom;
 		backgrounds[? "musicroom"	] = spr_music_room;
 		backgrounds[? "bathroom"	] = spr_bathroom;
-	
+		backgrounds[? "bs1"] = spr_bs1;
+		backgrounds[? "bs2"] = spr_bs2;
+		backgrounds[? "bs3"] = spr_bs3;
+		backgrounds[? "bs4"] = spr_bs4;
+		backgrounds[? "bs5"] = spr_bs5;
+		backgrounds[? "bs6"] = spr_bs6;
+		backgrounds[? "bs7"] = spr_bs7;
+		backgrounds[? "bs8"] = spr_bs8;
 	
 	if (time <= 0) show_error("Transition time should be >= 0", true);
 	
 	if (layer_exists("0")) exit;
 	
 	
-	if (typeof(new_bg) == "array")
-	{
-		new_bg	= new_bg[0];
-		ind		= ind[0];
-		time	= time[0];
-	}
+	if (typeof(new_bg)	== "array") new_bg	= new_bg[0];
+	if (typeof(ind)		== "array") ind		= ind[0];
+	if (typeof(time)	== "array") time	= time[0];
+	
 	
 		
 	//Set variables
@@ -29,7 +34,7 @@ function smooth_bg_change(new_bg, ind = 0, time = 0.5)
 	layer_background_stretch(temp_lay, true);
 	
 	
-	layer_background_sprite	(bg_lay_id, typeof(new_bg) == "array" ? backgrounds[? new_bg] : new_bg);
+	layer_background_sprite	(bg_lay_id, typeof(new_bg) == "string" ? backgrounds[? new_bg] : new_bg);
 	layer_background_index	(bg_lay_id, ind);
 	
 	

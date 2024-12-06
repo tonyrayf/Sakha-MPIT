@@ -102,5 +102,6 @@ y += speed_y;
 
 #endregion
 
-show_debug_message(x)
-show_debug_message(y)
+
+image_index = sign(last_direction_x + 1);
+if (!place_meeting(x, y + 1, obj_solidblock)) image_index = sign(last_direction_x + 1) + 2;

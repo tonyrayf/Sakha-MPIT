@@ -27,11 +27,11 @@ var is_narrator = (ChatterboxGetContentSpeaker(chatterbox, 0) == "");
 
 var scale = !is_narrator ? size[is_MC]	: size[0];
 var col	  = !is_narrator ? color[is_MC]	: color[0];
-draw_sprite_ext(main_character.sprite, main_character.index, is_mono ? room_width / 2 : chara_space, room_height, scale, scale, 0, col, image_alpha * !hide_charas);
+if (!hide_charas) draw_sprite_ext(main_character.sprite, main_character.index, is_mono ? room_width / 2 : chara_space, room_height, scale, scale, 0, col, image_alpha);
 
 scale = !is_narrator ? size[!is_MC]	 : size[0];
 col	  = !is_narrator ? color[!is_MC] : color[0];
-if (!is_mono) draw_sprite_ext(current_character.sprite, current_character.index, room_width - chara_space, room_height, scale, scale, 0, col, image_alpha * !hide_charas);
+if (!is_mono and !hide_charas) draw_sprite_ext(current_character.sprite, current_character.index, room_width - chara_space, room_height, scale, scale, 0, col, image_alpha);
 
 
 var yy = room_height - (text_space_y / 2);  // Y текстбокса и текста

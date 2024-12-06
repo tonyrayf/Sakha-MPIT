@@ -41,3 +41,18 @@ function chatterbox_jump_func()
 		is_mono = false;
 	}
 }
+
+
+ChatterboxAddFunction("bg", smooth_bg_change);
+
+ChatterboxAddFunction("main_chara_sprite",	get_main_character_sprite);
+ChatterboxAddFunction("main_chara_index",	get_main_character_index);
+
+ChatterboxAddFunction("curr_chara_sprite",	get_curr_character_sprite);
+ChatterboxAddFunction("curr_chara_index",	get_curr_character_index);
+
+ChatterboxAddFunction("text_scale", function(scale) { obj_dialogue_control.text_scale = scale[0]; });
+
+ChatterboxAddFunction("hide_charas", function(hide) { obj_dialogue_control.hide_charas = hide[0]; })
+
+ChatterboxAddFunction("is_mono", function() { obj_dialogue_control.is_mono = true; });

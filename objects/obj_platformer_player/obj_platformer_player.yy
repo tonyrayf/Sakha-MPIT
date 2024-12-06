@@ -33,8 +33,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_characters",
-    "path":"sprites/spr_characters/spr_characters.yy",
+    "name":"spr_plaformer",
+    "path":"sprites/spr_plaformer/spr_plaformer.yy",
   },
   "spriteMaskId":null,
   "visible":true,

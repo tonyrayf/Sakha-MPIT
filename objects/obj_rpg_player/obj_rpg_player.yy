@@ -31,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_characters",
-    "path":"sprites/spr_characters/spr_characters.yy",
+    "name":"spr_rpg_djuluur",
+    "path":"sprites/spr_rpg_djuluur/spr_rpg_djuluur.yy",
   },
   "spriteMaskId":null,
   "visible":true,
