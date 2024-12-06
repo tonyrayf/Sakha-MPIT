@@ -33,8 +33,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_",
-    "path":"sprites/spr_/spr_.yy",
+    "name":"spr_textbox",
+    "path":"sprites/spr_textbox/spr_textbox.yy",
   },
   "spriteMaskId":null,
   "visible":true,

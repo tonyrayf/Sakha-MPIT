@@ -1,4 +1,4 @@
-ChatterboxLoadFromFile("test.yarn");
+ChatterboxLoadFromFile(yarn_file);
 
 ChatterboxAddFunction("bg", smooth_bg_change);
 
@@ -13,6 +13,7 @@ ChatterboxAddFunction("is_mono", function() { obj_dialogue_control.is_mono = tru
 is_mono = false;		 // Is monologue
 
 main_character = {
+	name	: "Дьулуур",
 	sprite	: spr_djuluur,
 	index	: 0,
 }

@@ -1,6 +1,3 @@
-if (image_alpha != 1) image_alpha += 0.05;
-
-
 #region Input
 
 var key_up		= keyboard_check_pressed(vk_up)		or keyboard_check_pressed(ord("W"));
@@ -36,6 +33,10 @@ else if (count)
 }
 
 #endregion
+
+var fade_spd = 0.1;
+
+if (image_alpha < 1) image_alpha += fade_spd;
 
 
 if (ChatterboxIsStopped(chatterbox))

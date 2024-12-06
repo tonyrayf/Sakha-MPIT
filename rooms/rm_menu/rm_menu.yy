@@ -14,14 +14,12 @@
     {"name":"inst_AB35C0A","path":"rooms/rm_menu/rm_menu.yy",},
     {"name":"inst_4B526F8A","path":"rooms/rm_menu/rm_menu.yy",},
     {"name":"inst_76595899","path":"rooms/rm_menu/rm_menu.yy",},
-    {"name":"inst_783D21A8","path":"rooms/rm_menu/rm_menu.yy",},
     {"name":"inst_2AC1A46","path":"rooms/rm_menu/rm_menu.yy",},
   ],
   "isDnd":false,
   "layers":[
     {"$GMRInstanceLayer":"","%Name":"Blocks","depth":0,"effectEnabled":true,"effectType":null,"gridX":16,"gridY":16,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
         {"$GMRInstance":"v1","%Name":"inst_button_fadeout","colour":4294967295,"frozen":false,"hasCreationCode":true,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_button_fadeout","objectId":{"name":"obj_funcblock","path":"objects/obj_funcblock/obj_funcblock.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":1936.0,"y":-16.0,},
-        {"$GMRInstance":"v1","%Name":"inst_783D21A8","colour":4294967295,"frozen":false,"hasCreationCode":true,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_783D21A8","objectId":{"name":"obj_mouseblock","path":"objects/obj_mouseblock/obj_mouseblock.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":5.0,"scaleY":5.5,"x":448.0,"y":608.0,},
       ],"layers":[],"name":"Blocks","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRInstanceLayer":"","%Name":"InvisibleObjs","depth":100,"effectEnabled":true,"effectType":null,"gridX":16,"gridY":16,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
         {"$GMRInstance":"v1","%Name":"inst_3EECBC49","colour":4294967295,"frozen":false,"hasCreationCode":true,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_3EECBC49","objectId":{"name":"obj_fade_inout","path":"objects/obj_fade_inout/obj_fade_inout.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":10.0,"scaleY":10.0,"x":0.0,"y":-160.0,},

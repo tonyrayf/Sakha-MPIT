@@ -17,5 +17,8 @@ step_func = function()
 		i += 1;
 	}
 	
-	if (iterator >= 1) instance_destroy();
+	if (iterator >= 1)
+	{
+		room_goto(rm_scene1);
+	}
 }

@@ -1,4 +1,4 @@
-function smooth_bg_change(new_bg, ind = [0], time = [0.5])
+function smooth_bg_change(new_bg, ind = 0, time = 0.5)
 {	
 	static backgrounds = ds_map_create();
 		backgrounds[? "hallway"		] = spr_hallway;
@@ -7,11 +7,19 @@ function smooth_bg_change(new_bg, ind = [0], time = [0.5])
 		backgrounds[? "bathroom"	] = spr_bathroom;
 	
 	
-	if (time[0] <= 0) show_error("Transition time should be >= 0", true);
+	if (time <= 0) show_error("Transition time should be >= 0", true);
 	
 	if (layer_exists("0")) exit;
 	
 	
+	if (typeof(new_bg) == "array")
+	{
+		new_bg	= new_bg[0];
+		ind		= ind[0];
+		time	= time[0];
+	}
+	
+		
 	//Set variables
 	var bg_lay_id	= layer_background_get_id("Background");
 	var old_bg_spr	= layer_background_get_sprite(bg_lay_id);
@@ -20,15 +28,16 @@ function smooth_bg_change(new_bg, ind = [0], time = [0.5])
 		temp_lay = layer_background_create(temp_lay, old_bg_spr);
 	layer_background_stretch(temp_lay, true);
 	
-		
-	layer_background_sprite	(bg_lay_id, backgrounds[? new_bg[0]]);
-	layer_background_index	(bg_lay_id, ind[0]);
+	
+	layer_background_sprite	(bg_lay_id, typeof(new_bg) == "array" ? backgrounds[? new_bg] : new_bg);
+	layer_background_index	(bg_lay_id, ind);
 	
 	
 	with (instance_create_depth(0, 0, 0, obj_funcblock,
 	{
-		spd			: 1 / (time[0] * game_get_speed(gamespeed_fps)),
+		spd			: 1 / (time * game_get_speed(gamespeed_fps)),
 		temp_lay_id : temp_lay,
+		image_alpha : 0
 	}))
 	{
 		i = 1;
@@ -45,4 +54,6 @@ function smooth_bg_change(new_bg, ind = [0], time = [0.5])
 			}
 		}
 	}
+	
+	return false;
 }

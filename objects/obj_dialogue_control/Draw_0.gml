@@ -10,7 +10,7 @@ draw_set_alpha(image_alpha);
 
 
 var text_scale = 1;
-var text_space_x = 300;
+var text_space_x = 200;
 var text_space_y = 200;
 
 var chara_space = 500;
@@ -20,13 +20,19 @@ var chara_space = 500;
 
 #region Draw characters on screen
 
-var is_MC = (ChatterboxGetContentSpeaker(chatterbox, 0) == "Молодчик");	 // is Main Character?
+var is_MC = (ChatterboxGetContentSpeaker(chatterbox, 0) == main_character.name); // is Main Character?
 
+var is_narrator = (ChatterboxGetContentSpeaker(chatterbox, 0) == "");
 
 //Chara-s
-draw_sprite_ext(main_character.sprite, main_character.index, is_mono ? room_width / 2 : chara_space, room_height, size[is_MC], size[is_MC], 0, color[is_MC], 1);
 
-if (!is_mono) draw_sprite_ext(current_character.sprite, current_character.index, room_width - chara_space, room_height, size[!is_MC], size[!is_MC], 0, color[!is_MC], 1);
+var scale = !is_narrator ? size[is_MC]	: size[0];
+var col	  = !is_narrator ? color[is_MC]	: color[0];
+draw_sprite_ext(main_character.sprite, main_character.index, is_mono ? room_width / 2 : chara_space, room_height, scale, scale, 0, col, image_alpha);
+
+scale = !is_narrator ? size[!is_MC]	 : size[0];
+col	  = !is_narrator ? color[!is_MC] : color[0];
+if (!is_mono) draw_sprite_ext(current_character.sprite, current_character.index, room_width - chara_space, room_height, scale, scale, 0, col, image_alpha);
 
 
 var yy = room_height - (text_space_y / 2);  // Y текстбокса и текста
@@ -35,8 +41,8 @@ draw_rectangle_center(room_width / 2, yy, room_width, text_space_y, false, c_bla
 
 
 //X текстбокса и текста
-draw_set_halign(is_MC ? fa_left : fa_right);
-var xx = is_MC ? text_space_x : room_width - text_space_x;
+draw_set_halign(fa_left);
+var xx = text_space_x;
 
 //Риусем текста поверх текстбокса
 draw_text_transformed(xx, yy, text, text_scale, text_scale, 0);
@@ -61,7 +67,7 @@ if (ChatterboxGetOptionCount(chatterbox)) //Рисуем опции
 			yy = (room_height / 6) * (i + 2);
 		}
 		
-		draw_rectangle_center(xx, yy, width, height, false, c_black, 0.5);
+		draw_rectangle_center(xx, yy, width, height, false, c_black, 0.5 * image_alpha);
 		
 		var icon = "";
 		if (option_index == i) icon = "> ";
