@@ -8,6 +8,10 @@ ChatterboxAddFunction("main_chara_index",	get_main_character_index);
 ChatterboxAddFunction("curr_chara_sprite",	get_curr_character_sprite);
 ChatterboxAddFunction("curr_chara_index",	get_curr_character_index);
 
+ChatterboxAddFunction("text_scale", function(scale) { obj_dialogue_control.text_scale = scale[0]; });
+
+ChatterboxAddFunction("hide_charas", f)
+
 ChatterboxAddFunction("is_mono", function() { obj_dialogue_control.is_mono = true; });
 
 is_mono = false;		 // Is monologue
@@ -30,6 +34,8 @@ chatterbox_update();					// Gets "node" and "text" variables
 
 ChatterboxNodeChangeCallback(chatterbox_jump_func);
 
+
+text_scale = 1;
 
 option_index = 0;
 

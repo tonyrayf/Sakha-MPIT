@@ -9,7 +9,6 @@ draw_set_valign(fa_middle);
 draw_set_alpha(image_alpha);
 
 
-var text_scale = 1;
 var text_space_x = 200;
 var text_space_y = 200;
 
@@ -28,11 +27,11 @@ var is_narrator = (ChatterboxGetContentSpeaker(chatterbox, 0) == "");
 
 var scale = !is_narrator ? size[is_MC]	: size[0];
 var col	  = !is_narrator ? color[is_MC]	: color[0];
-draw_sprite_ext(main_character.sprite, main_character.index, is_mono ? room_width / 2 : chara_space, room_height, scale, scale, 0, col, image_alpha);
+draw_sprite_ext(main_character.sprite, main_character.index, is_mono ? room_width / 2 : chara_space, room_height, scale, scale, 0, col, image_alpha * !hide_charas);
 
 scale = !is_narrator ? size[!is_MC]	 : size[0];
 col	  = !is_narrator ? color[!is_MC] : color[0];
-if (!is_mono) draw_sprite_ext(current_character.sprite, current_character.index, room_width - chara_space, room_height, scale, scale, 0, col, image_alpha);
+if (!is_mono) draw_sprite_ext(current_character.sprite, current_character.index, room_width - chara_space, room_height, scale, scale, 0, col, image_alpha * !hide_charas);
 
 
 var yy = room_height - (text_space_y / 2);  // Y текстбокса и текста
